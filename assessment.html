@@ -1,1 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Competency assessment on SkillIntelligence.">
+
+    <title>Assessment | SkillIntelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                SkillIntelligence
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <section class="page-header">
+
+            <div>
+
+                <div class="badge">
+                    SIH26101 • Competency Assessment
+                </div>
+
+                <h1>Competency Assessment</h1>
+
+                <p>
+                    Evaluate your current knowledge and skills
+                    across important competency domains.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <h3>Platform</h3>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="profile.html">
+                        👤 My Profile
+                    </a>
+
+                    <a href="assessment.html" class="active">
+                        🎯 Assessment
+                    </a>
+
+                    <a href="skill-gap.html">
+                        🧠 Skill Gaps
+                    </a>
+
+                    <a href="recommendations.html">
+                        📚 Recommendations
+                    </a>
+
+                    <a href="quiz.html">
+                        📝 AI Quiz
+                    </a>
+
+                    <a href="progress.html">
+                        📈 Progress
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- CONTENT -->
+
+            <div class="main-content">
+
+
+                <!-- INTRO -->
+
+                <section class="card">
+
+                    <div class="ai-box">
+
+                        <div class="ai-icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <h3>AI-Assisted Assessment</h3>
+
+                            <p>
+                                This assessment helps estimate your
+                                current competency level. The results
+                                can later be used for skill-gap analysis
+                                and personalized learning recommendations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STATISTICAL -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>1. Statistical Competency</h2>
+
+                            <p class="text-muted">
+                                Select the option that best represents
+                                your current level.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assessment-question">
+
+                        <h3>
+                            How would you rate your knowledge of
+                            statistics and data analysis?
+                        </h3>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="statistics"
+                                value="beginner">
+
+                            <span>
+                                Beginner — Basic understanding
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="statistics"
+                                value="intermediate">
+
+                            <span>
+                                Intermediate — Can perform common
+                                statistical analysis
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="statistics"
+                                value="advanced">
+
+                            <span>
+                                Advanced — Can independently handle
+                                complex statistical analysis
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TECHNICAL -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>2. Technical Competency</h2>
+
+                            <p class="text-muted">
+                                Evaluate your programming and
+                                technical skills.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assessment-question">
+
+                        <h3>
+                            What is your current programming skill level?
+                        </h3>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="technical"
+                                value="beginner">
+
+                            <span>
+                                Beginner — Basic programming concepts
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="technical"
+                                value="intermediate">
+
+                            <span>
+                                Intermediate — Can build small
+                                applications
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="technical"
+                                value="advanced">
+
+                            <span>
+                                Advanced — Can develop and manage
+                                complex applications
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DIGITAL GOVERNANCE -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>3. Digital Governance</h2>
+
+                            <p class="text-muted">
+                                Assess your understanding of digital
+                                systems and governance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assessment-question">
+
+                        <h3>
+                            How familiar are you with digital
+                            governance systems?
+                        </h3>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="governance"
+                                value="beginner">
+
+                            <span>
+                                Beginner — Limited exposure
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="governance"
+                                value="intermediate">
+
+                            <span>
+                                Intermediate — Understand common
+                                digital governance processes
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="governance"
+                                value="advanced">
+
+                            <span>
+                                Advanced — Strong understanding of
+                                digital governance systems
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- BEHAVIOURAL -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>4. Behavioural & Managerial</h2>
+
+                            <p class="text-muted">
+                                Evaluate communication, teamwork
+                                and leadership skills.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assessment-question">
+
+                        <h3>
+                            How would you rate your communication
+                            and teamwork skills?
+                        </h3>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="behavioural"
+                                value="beginner">
+
+                            <span>
+                                Beginner — Developing these skills
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="behavioural"
+                                value="intermediate">
+
+                            <span>
+                                Intermediate — Comfortable working
+                                with teams
+                            </span>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="behavioural"
+                                value="advanced">
+
+                            <span>
+                                Advanced — Strong communication and
+                                leadership ability
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SUBMIT -->
+
+                <section class="card">
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="btn"
+                            onclick="submitAssessment()">
+
+                            Complete Assessment →
+
+                        </button>
+
+                        <a
+                            href="dashboard.html"
+                            class="btn btn-secondary">
+
+                            Back to Dashboard
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+
+    <script>
+
+        function submitAssessment() {
+
+            const statistics =
+                document.querySelector('input[name="statistics"]:checked');
+
+            const technical =
+                document.querySelector('input[name="technical"]:checked');
+
+            const governance =
+                document.querySelector('input[name="governance"]:checked');
+
+            const behavioural =
+                document.querySelector('input[name="behavioural"]:checked');
+
+
+            if (
+                !statistics ||
+                !technical ||
+                !governance ||
+                !behavioural
+            ) {
+
+                alert(
+                    "Please answer all four competency sections before submitting."
+                );
+
+                return;
+
+            }
+
+
+            const assessment = {
+
+                statistics: statistics.value,
+
+                technical: technical.value,
+
+                governance: governance.value,
+
+                behavioural: behavioural.value,
+
+                completed: true,
+
+                date: new Date().toISOString()
+
+            };
+
+
+            localStorage.setItem(
+                "si_assessment",
+                JSON.stringify(assessment)
+            );
+
+
+            alert(
+                "Assessment completed successfully!"
+            );
+
+
+            window.location.href = "skill-gap.html";
+
+        }
+
+    </script>
+
+</body>
+
+  </html>
