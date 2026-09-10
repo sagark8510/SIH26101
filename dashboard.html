@@ -1,1 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SkillIntelligence dashboard for competency assessment, skill-gap analysis and personalized learning.">
+
+    <title>Dashboard | SkillIntelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+         ============================== -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                SkillIntelligence
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==============================
+         PAGE HEADER
+         ============================== -->
+
+    <main class="container">
+
+        <section class="page-header">
+
+            <div>
+                <div class="badge">
+                    SIH26101 • Smart Education
+                </div>
+
+                <h1>Learning Dashboard</h1>
+
+                <p>
+                    Monitor your competencies, identify skill gaps
+                    and continue your personalized learning journey.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             WELCOME CARD
+             ============================== -->
+
+        <section class="card dashboard-welcome">
+
+            <div>
+                <span class="text-muted">Welcome back</span>
+
+                <h2 id="dashboardUserName">
+                    Demo Official
+                </h2>
+
+                <p id="dashboardUserRole">
+                    Statistical Officer • Official Statistics
+                </p>
+            </div>
+
+            <a href="profile.html" class="btn">
+                View Profile →
+            </a>
+
+        </section>
+
+
+        <!-- ==============================
+             STATISTICS
+             ============================== -->
+
+        <section class="grid grid-4 dashboard-stats">
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Overall Progress
+                </span>
+
+                <strong id="overallProgress">
+                    58%
+                </strong>
+
+                <span class="stat-info">
+                    Learning progress
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Skill Gaps
+                </span>
+
+                <strong id="skillGapCount">
+                    3
+                </strong>
+
+                <span class="stat-info">
+                    Areas to improve
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Courses Completed
+                </span>
+
+                <strong id="coursesCompleted">
+                    2
+                </strong>
+
+                <span class="stat-info">
+                    Completed learning
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Quizzes Completed
+                </span>
+
+                <strong id="quizzesCompleted">
+                    5
+                </strong>
+
+                <span class="stat-info">
+                    Assessments completed
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MAIN DASHBOARD
+             ============================== -->
+
+        <section class="dashboard-layout">
+
+
+            <!-- ==========================
+                 SIDEBAR
+                 ========================== -->
+
+            <aside class="sidebar">
+
+                <h3>Platform</h3>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html" class="active">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="profile.html">
+                        👤 My Profile
+                    </a>
+
+                    <a href="assessment.html">
+                        🎯 Assessment
+                    </a>
+
+                    <a href="skill-gap.html">
+                        🧠 Skill Gaps
+                    </a>
+
+                    <a href="recommendations.html">
+                        📚 Recommendations
+                    </a>
+
+                    <a href="quiz.html">
+                        📝 AI Quiz
+                    </a>
+
+                    <a href="progress.html">
+                        📈 Progress
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- ==========================
+                 MAIN CONTENT
+                 ========================== -->
+
+            <div class="main-content">
+
+
+                <!-- ======================
+                     COMPETENCY PROFILE
+                     ====================== -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>Competency Profile</h2>
+
+                            <p class="text-muted">
+                                Current competency levels
+                            </p>
+                        </div>
+
+                        <a href="assessment.html" class="btn btn-secondary">
+                            Take Assessment
+                        </a>
+
+                    </div>
+
+
+                    <div id="competencyList">
+
+                        <!-- Statistics -->
+
+                        <div class="skill-row">
+
+                            <div class="skill-row-top">
+
+                                <span>
+                                    Statistics
+                                </span>
+
+                                <strong>
+                                    85%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress-fill"
+                                    style="width: 85%;">
+                                </div>
+
+                            </div>
+
+                            <span class="badge badge-success">
+                                Advanced
+                            </span>
+
+                        </div>
+
+
+                        <!-- Python -->
+
+                        <div class="skill-row">
+
+                            <div class="skill-row-top">
+
+                                <span>
+                                    Python
+                                </span>
+
+                                <strong>
+                                    65%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress-fill"
+                                    style="width: 65%;">
+                                </div>
+
+                            </div>
+
+                            <span class="badge">
+                                Intermediate
+                            </span>
+
+                        </div>
+
+
+                        <!-- SQL -->
+
+                        <div class="skill-row">
+
+                            <div class="skill-row-top">
+
+                                <span>
+                                    SQL
+                                </span>
+
+                                <strong>
+                                    35%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress-fill"
+                                    style="width: 35%;">
+                                </div>
+
+                            </div>
+
+                            <span class="badge badge-warning">
+                                Beginner
+                            </span>
+
+                        </div>
+
+
+                        <!-- Data Visualization -->
+
+                        <div class="skill-row">
+
+                            <div class="skill-row-top">
+
+                                <span>
+                                    Data Visualization
+                                </span>
+
+                                <strong>
+                                    60%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress-fill"
+                                    style="width: 60%;">
+                                </div>
+
+                            </div>
+
+                            <span class="badge">
+                                Intermediate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================
+                     SKILL GAP
+                     ====================== -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Skill-Gap Overview
+                            </h2>
+
+                            <p class="text-muted">
+                                Competencies that need attention
+                            </p>
+
+                        </div>
+
+                        <a href="skill-gap.html" class="btn btn-secondary">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="gap-list">
+
+
+                        <div class="gap-item">
+
+                            <div>
+
+                                <strong>
+                                    SQL
+                                </strong>
+
+                                <p>
+                                    Current: 35% • Required: 75%
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-danger">
+                                High Gap
+                            </span>
+
+                        </div>
+
+
+                        <div class="gap-item">
+
+                            <div>
+
+                                <strong>
+                                    Python
+                                </strong>
+
+                                <p>
+                                    Current: 65% • Required: 85%
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-warning">
+                                Medium Gap
+                            </span>
+
+                        </div>
+
+
+                        <div class="gap-item">
+
+                            <div>
+
+                                <strong>
+                                    Data Visualization
+                                </strong>
+
+                                <p>
+                                    Current: 60% • Required: 80%
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-warning">
+                                Medium Gap
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================
+                     RECOMMENDATIONS
+                     ====================== -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Recommended Learning
+                            </h2>
+
+                            <p class="text-muted">
+                                Personalized recommendations based
+                                on your skill gaps
+                            </p>
+
+                        </div>
+
+                        <a href="recommendations.html"
+                            class="btn btn-secondary">
+                            Explore →
+                        </a>
+
+                    </div>
+
+
+                    <div class="recommendation-list">
+
+
+                        <div class="recommendation-item">
+
+                            <div class="recommendation-icon">
+                                📘
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    SQL for Data Analysis
+                                </h3>
+
+                                <p>
+                                    Build practical SQL skills
+                                    for statistical data analysis.
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-danger">
+                                High Priority
+                            </span>
+
+                        </div>
+
+
+                        <div class="recommendation-item">
+
+                            <div class="recommendation-icon">
+                                🐍
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Advanced Python for Statistics
+                                </h3>
+
+                                <p>
+                                    Improve Python skills for
+                                    statistical computing.
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-warning">
+                                Medium
+                            </span>
+
+                        </div>
+
+
+                        <div class="recommendation-item">
+
+                            <div class="recommendation-icon">
+                                📊
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Data Visualization Fundamentals
+                                </h3>
+
+                                <p>
+                                    Learn how to communicate data
+                                    using effective visualizations.
+                                </p>
+
+                            </div>
+
+                            <span class="badge badge-warning">
+                                Medium
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================
+                     QUICK ACTIONS
+                     ====================== -->
+
+                <section>
+
+                    <h2 class="section-heading">
+                        Quick Actions
+                    </h2>
+
+                    <div class="grid grid-3">
+
+                        <a href="assessment.html"
+                            class="card action-card">
+
+                            <div class="action-icon">
+                                🎯
+                            </div>
+
+                            <h3>
+                                Start Assessment
+                            </h3>
+
+                            <p>
+                                Evaluate your current competencies.
+                            </p>
+
+                        </a>
+
+
+                        <a href="quiz.html"
+                            class="card action-card">
+
+                            <div class="action-icon">
+                                📝
+                            </div>
+
+                            <h3>
+                                Generate AI Quiz
+                            </h3>
+
+                            <p>
+                                Test your knowledge with AI-generated questions.
+                            </p>
+
+                        </a>
+
+
+                        <a href="progress.html"
+                            class="card action-card">
+
+                            <div class="action-icon">
+                                📈
+                            </div>
+
+                            <h3>
+                                View Progress
+                            </h3>
+
+                            <p>
+                                Track your learning journey.
+                            </p>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+
+    <footer class="footer">
+
+        SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+         ============================== -->
+
+    <script src="app.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const user = getUser();
+            const progress = getProgress();
+            const gaps = getSkillGaps();
+
+            document.getElementById("dashboardUserName").textContent =
+                user.name;
+
+            document.getElementById("dashboardUserRole").textContent =
+                user.designation + " • " + user.department;
+
+            document.getElementById("overallProgress").textContent =
+                progress.overallProgress + "%";
+
+            document.getElementById("skillGapCount").textContent =
+                gaps.length;
+
+            document.getElementById("coursesCompleted").textContent =
+                progress.coursesCompleted;
+
+            document.getElementById("quizzesCompleted").textContent =
+                progress.quizzesCompleted;
+
+        });
+
+    </script>
+
+</body>
+
+                          </html>
