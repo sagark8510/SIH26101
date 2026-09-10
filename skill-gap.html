@@ -1,1 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="AI-powered skill gap analysis on SkillIntelligence.">
+
+    <title>Skill Gap Analysis | SkillIntelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                SkillIntelligence
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <section class="page-header">
+
+            <div>
+
+                <div class="badge">
+                    SIH26101 • AI Analysis
+                </div>
+
+                <h1>Skill Gap Analysis</h1>
+
+                <p>
+                    Understand the difference between your current
+                    competency and the level required for your role.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <h3>Platform</h3>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="profile.html">
+                        👤 My Profile
+                    </a>
+
+                    <a href="assessment.html">
+                        🎯 Assessment
+                    </a>
+
+                    <a href="skill-gap.html" class="active">
+                        🧠 Skill Gaps
+                    </a>
+
+                    <a href="recommendations.html">
+                        📚 Recommendations
+                    </a>
+
+                    <a href="quiz.html">
+                        📝 AI Quiz
+                    </a>
+
+                    <a href="progress.html">
+                        📈 Progress
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- CONTENT -->
+
+            <div class="main-content">
+
+
+                <!-- AI SUMMARY -->
+
+                <section class="card">
+
+                    <div class="ai-box">
+
+                        <div class="ai-icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <h2>AI Skill-Gap Analysis</h2>
+
+                            <p>
+                                Based on the competency assessment,
+                                the platform identifies areas where
+                                additional learning may be required.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- OVERALL STATUS -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>Overall Skill Status</h2>
+
+                            <p class="text-muted">
+                                Current competency compared with
+                                expected competency.
+                            </p>
+
+                        </div>
+
+                        <span class="badge badge-warning">
+                            3 Areas Need Attention
+                        </span>
+
+                    </div>
+
+
+                    <div class="grid grid-3">
+
+
+                        <div class="stat-card">
+
+                            <span class="stat-label">
+                                Current Average
+                            </span>
+
+                            <strong class="stat-value">
+                                58%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span class="stat-label">
+                                Required Average
+                            </span>
+
+                            <strong class="stat-value">
+                                80%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span class="stat-label">
+                                Overall Gap
+                            </span>
+
+                            <strong class="stat-value">
+                                22%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SKILL GAP TABLE -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>Identified Skill Gaps</h2>
+
+                            <p class="text-muted">
+                                Priority areas identified from
+                                the current competency profile.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Skill</th>
+
+                                    <th>Current</th>
+
+                                    <th>Required</th>
+
+                                    <th>Gap</th>
+
+                                    <th>Priority</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <strong>SQL</strong>
+                                    </td>
+
+                                    <td>35%</td>
+
+                                    <td>75%</td>
+
+                                    <td>
+                                        <span class="badge badge-danger">
+                                            40%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-danger">
+                                            High
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>Python</strong>
+                                    </td>
+
+                                    <td>65%</td>
+
+                                    <td>85%</td>
+
+                                    <td>
+                                        <span class="badge badge-warning">
+                                            20%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-warning">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>Data Visualization</strong>
+                                    </td>
+
+                                    <td>60%</td>
+
+                                    <td>80%</td>
+
+                                    <td>
+                                        <span class="badge badge-warning">
+                                            20%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-warning">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- VISUAL SKILL GAPS -->
+
+                <section class="card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>Competency Comparison</h2>
+
+                            <p class="text-muted">
+                                Current level versus required level.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SQL -->
+
+                    <div class="skill-gap-item">
+
+                        <div class="skill-gap-header">
+
+                            <strong>SQL</strong>
+
+                            <span>
+                                35% / 75%
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                class="fill sql"
+                                style="width: 47%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PYTHON -->
+
+                    <div class="skill-gap-item">
+
+                        <div class="skill-gap-header">
+
+                            <strong>Python</strong>
+
+                            <span>
+                                65% / 85%
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                class="fill python"
+                                style="width: 76%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATA VISUALIZATION -->
+
+                    <div class="skill-gap-item">
+
+                        <div class="skill-gap-header">
+
+                            <strong>Data Visualization</strong>
+
+                            <span>
+                                60% / 80%
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                class="fill stats"
+                                style="width: 75%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ACTION -->
+
+                <section class="card">
+
+                    <div class="action-card">
+
+                        <div>
+
+                            <h2>
+                                Ready to improve your skills?
+                            </h2>
+
+                            <p>
+                                Explore personalized learning
+                                recommendations based on your
+                                identified skill gaps.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="recommendations.html"
+                            class="btn">
+
+                            View Recommendations →
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+  </html>
