@@ -839,3 +839,197 @@ textarea.form-control {
         font-size: 24px;
     }
                }
+
+
+/* ==========================================
+   LANDING PAGE
+   ========================================== */
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 18px 0;
+    color: var(--text);
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.hero-card h3 {
+    margin-bottom: 25px;
+}
+
+.skill {
+    margin-bottom: 22px;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bar {
+    width: 100%;
+    height: 9px;
+    background: var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.fill.stats {
+    width: 85%;
+}
+
+.fill.python {
+    width: 65%;
+}
+
+.fill.sql {
+    width: 35%;
+}
+
+
+/* ==========================================
+   FEATURES
+   ========================================== */
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 24px 90px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-card .icon {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   LANDING PAGE MOBILE
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 55px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-card {
+        padding: 22px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
