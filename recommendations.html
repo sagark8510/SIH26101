@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Personalized learning recommendations on SkillIntelligence.">
-
     <title>Recommendations | SkillIntelligence</title>
 
     <link rel="stylesheet" href="styles.css">
@@ -15,430 +12,238 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar">
 
-        <div class="container">
+        <div class="nav-brand">
+            SkillIntelligence
+        </div>
 
-            <a href="index.html" class="logo">
-                SkillIntelligence
-            </a>
+        <div class="nav-links">
 
-            <div class="nav-links">
-                <a href="dashboard.html">Dashboard</a>
-                <a href="profile.html">Profile</a>
-                <a href="assessment.html">Assessment</a>
-            </div>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="assessment.html">Assessment</a>
+            <a href="skill-gap.html">Skill Gap</a>
 
         </div>
 
     </nav>
 
 
-    <!-- MAIN -->
+    <!-- =========================
+         MAIN
+    ========================== -->
 
     <main class="container">
 
+        <!-- PAGE HEADER -->
+
         <section class="page-header">
 
-            <div>
+            <h1>Personalized Learning Recommendations</h1>
 
-                <div class="badge">
-                    SIH26101 • Personalized Learning
-                </div>
+            <p>
+                Explore learning resources based on your
+                competency profile and identified skill gaps.
+            </p>
 
-                <h1>Learning Recommendations</h1>
+        </section>
 
-                <p>
-                    Personalized learning resources based on your
-                    identified competency gaps.
-                </p>
+
+        <!-- =========================
+             AI SUMMARY
+        ========================== -->
+
+        <section class="ai-box">
+
+            <h2>🤖 AI Learning Assistant</h2>
+
+            <p id="aiRecommendation">
+                Analyzing your skill gaps...
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH
+        ========================== -->
+
+        <section class="card">
+
+            <h2>🔎 Find Learning Resources</h2>
+
+            <br>
+
+            <input
+                type="text"
+                id="searchInput"
+                class="form-input"
+                placeholder="Search courses, skills, topics..."
+                oninput="filterResources()"
+            >
+
+            <br><br>
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-group">
+
+                <button
+                    class="btn btn-secondary filter-btn active"
+                    onclick="filterBySkill('All', this)"
+                >
+                    All
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('SQL', this)"
+                >
+                    SQL
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('Python', this)"
+                >
+                    Python
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('Statistics', this)"
+                >
+                    Statistics
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('Data Visualization', this)"
+                >
+                    Data Visualization
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('Excel', this)"
+                >
+                    Excel
+                </button>
+
+                <button
+                    class="btn btn-secondary filter-btn"
+                    onclick="filterBySkill('AI & ML', this)"
+                >
+                    AI & ML
+                </button>
 
             </div>
 
         </section>
 
 
-        <section class="dashboard-layout">
+        <!-- =========================
+             AI RECOMMENDED
+        ========================== -->
 
+        <section>
 
-            <!-- SIDEBAR -->
+            <div class="section-title">
 
-            <aside class="sidebar">
+                <h2>🎯 Recommended For You</h2>
 
-                <h3>Platform</h3>
-
-                <nav class="sidebar-nav">
-
-                    <a href="dashboard.html">
-                        📊 Dashboard
-                    </a>
-
-                    <a href="profile.html">
-                        👤 My Profile
-                    </a>
-
-                    <a href="assessment.html">
-                        🎯 Assessment
-                    </a>
-
-                    <a href="skill-gap.html">
-                        🧠 Skill Gaps
-                    </a>
-
-                    <a href="recommendations.html" class="active">
-                        📚 Recommendations
-                    </a>
-
-                    <a href="quiz.html">
-                        📝 AI Quiz
-                    </a>
-
-                    <a href="progress.html">
-                        📈 Progress
-                    </a>
-
-                </nav>
-
-            </aside>
-
-
-            <!-- CONTENT -->
-
-            <div class="main-content">
-
-
-                <!-- AI RECOMMENDATION SUMMARY -->
-
-                <section class="card">
-
-                    <div class="ai-box">
-
-                        <div class="ai-icon">
-                            🤖
-                        </div>
-
-                        <div>
-
-                            <h2>AI-Powered Recommendations</h2>
-
-                            <p>
-                                The platform prioritizes learning
-                                resources according to your skill gaps,
-                                competency requirements and learning needs.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- PRIORITY -->
-
-                <section class="card">
-
-                    <div class="section-heading">
-
-                        <div>
-
-                            <h2>Recommended Learning Path</h2>
-
-                            <p class="text-muted">
-                                Follow the suggested order to improve
-                                your most important skill gaps.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- RECOMMENDATION 1 -->
-
-                    <div class="recommendation-card">
-
-                        <div class="recommendation-number">
-                            01
-                        </div>
-
-                        <div class="recommendation-content">
-
-                            <div class="recommendation-header">
-
-                                <h3>
-                                    SQL for Data Analysis
-                                </h3>
-
-                                <span class="badge badge-danger">
-                                    High Priority
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Strengthen SQL fundamentals and learn
-                                how to query, filter, aggregate and
-                                analyze datasets.
-                            </p>
-
-                            <div class="recommendation-meta">
-
-                                <span>📚 Course</span>
-
-                                <span>⏱️ 4–6 Weeks</span>
-
-                                <span>🎯 Skill Gap: 40%</span>
-
-                            </div>
-
-                            <a
-                                href="quiz.html"
-                                class="btn btn-small">
-
-                                Start Learning →
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- RECOMMENDATION 2 -->
-
-                    <div class="recommendation-card">
-
-                        <div class="recommendation-number">
-                            02
-                        </div>
-
-                        <div class="recommendation-content">
-
-                            <div class="recommendation-header">
-
-                                <h3>
-                                    Advanced Python for Statistics
-                                </h3>
-
-                                <span class="badge badge-warning">
-                                    Medium Priority
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Improve Python skills for statistical
-                                analysis, data processing and
-                                automation.
-                            </p>
-
-                            <div class="recommendation-meta">
-
-                                <span>📚 Course</span>
-
-                                <span>⏱️ 3–5 Weeks</span>
-
-                                <span>🎯 Skill Gap: 20%</span>
-
-                            </div>
-
-                            <a
-                                href="quiz.html"
-                                class="btn btn-small">
-
-                                Start Learning →
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- RECOMMENDATION 3 -->
-
-                    <div class="recommendation-card">
-
-                        <div class="recommendation-number">
-                            03
-                        </div>
-
-                        <div class="recommendation-content">
-
-                            <div class="recommendation-header">
-
-                                <h3>
-                                    Data Visualization Fundamentals
-                                </h3>
-
-                                <span class="badge badge-warning">
-                                    Medium Priority
-                                </span>
-
-                            </div>
-
-                            <p>
-                                Learn effective methods for presenting
-                                statistical information through charts,
-                                dashboards and visual reports.
-                            </p>
-
-                            <div class="recommendation-meta">
-
-                                <span>📖 Learning Module</span>
-
-                                <span>⏱️ 2–4 Weeks</span>
-
-                                <span>🎯 Skill Gap: 20%</span>
-
-                            </div>
-
-                            <a
-                                href="quiz.html"
-                                class="btn btn-small">
-
-                                Start Learning →
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- LEARNING STRATEGY -->
-
-                <section class="card">
-
-                    <div class="section-heading">
-
-                        <div>
-
-                            <h2>Suggested Learning Strategy</h2>
-
-                            <p class="text-muted">
-                                A simple approach to close the identified
-                                competency gaps.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="grid grid-3">
-
-
-                        <div class="info-card">
-
-                            <div class="info-icon">
-                                🎯
-                            </div>
-
-                            <div>
-
-                                <h3>Focus</h3>
-
-                                <p>
-                                    Start with the highest-priority
-                                    skill gap.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="info-card">
-
-                            <div class="info-icon">
-                                📝
-                            </div>
-
-                            <div>
-
-                                <h3>Practice</h3>
-
-                                <p>
-                                    Use quizzes and assessments to
-                                    test your understanding.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="info-card">
-
-                            <div class="info-icon">
-                                📈
-                            </div>
-
-                            <div>
-
-                                <h3>Track</h3>
-
-                                <p>
-                                    Monitor progress and reassess
-                                    your competency regularly.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- QUIZ CTA -->
-
-                <section class="card">
-
-                    <div class="action-card">
-
-                        <div>
-
-                            <h2>
-                                Test Your Knowledge
-                            </h2>
-
-                            <p>
-                                Generate an AI-assisted quiz from
-                                your learning material and evaluate
-                                your understanding.
-                            </p>
-
-                        </div>
-
-                        <a
-                            href="quiz.html"
-                            class="btn">
-
-                            Open AI Quiz →
-
-                        </a>
-
-                    </div>
-
-                </section>
-
+                <p>
+                    Resources prioritized according to your
+                    current skill gaps.
+                </p>
 
             </div>
+
+
+            <div
+                id="recommendedContainer"
+                class="card-grid"
+            >
+
+                <!-- Dynamic recommendations -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ALL RESOURCES
+        ========================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>📚 Explore Learning Resources</h2>
+
+                <p>
+                    Browse the complete demo learning repository.
+                </p>
+
+            </div>
+
+
+            <div
+                id="resourceContainer"
+                class="card-grid"
+            >
+
+                <!-- Resources appear here -->
+
+            </div>
+
+
+            <p
+                id="noResults"
+                style="display:none;"
+            >
+                No matching learning resources found.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             INFO
+        ========================== -->
+
+        <section class="card">
+
+            <h2>ℹ️ Learning Repository</h2>
+
+            <p>
+
+                This prototype uses a simulated learning-resource
+                repository to demonstrate personalized
+                recommendations and exploration.
+
+                In a production deployment, this layer can
+                integrate with the iGOT Karmayogi ecosystem
+                through authorized APIs.
+
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="footer">
 
@@ -447,8 +252,573 @@
     </footer>
 
 
+    <!-- CENTRAL APP -->
+
     <script src="app.js"></script>
 
-</body>
 
-</html>
+    <!-- =========================
+         RECOMMENDATION LOGIC
+    ========================== -->
+
+    <script>
+
+        /*
+         * Demo Learning Repository
+         */
+
+        const learningResources = [
+
+            {
+                title: "SQL Fundamentals",
+                skill: "SQL",
+                type: "Course",
+                level: "Beginner",
+                description:
+                    "Learn SQL fundamentals, queries, filtering and database basics."
+            },
+
+            {
+                title: "SQL for Data Analysis",
+                skill: "SQL",
+                type: "Course",
+                level: "Intermediate",
+                description:
+                    "Use SQL for practical data analysis and statistical reporting."
+            },
+
+            {
+                title: "Advanced SQL Practice",
+                skill: "SQL",
+                type: "Practice",
+                level: "Advanced",
+                description:
+                    "Practice joins, subqueries, aggregation and advanced SQL problems."
+            },
+
+            {
+                title: "Python Fundamentals",
+                skill: "Python",
+                type: "Course",
+                level: "Beginner",
+                description:
+                    "Build a strong foundation in Python programming."
+            },
+
+            {
+                title: "Python for Statistics",
+                skill: "Python",
+                type: "Course",
+                level: "Intermediate",
+                description:
+                    "Apply Python to statistical analysis and data processing."
+            },
+
+            {
+                title: "Advanced Python for Data Analysis",
+                skill: "Python",
+                type: "Learning Module",
+                level: "Advanced",
+                description:
+                    "Explore advanced Python techniques for data analysis."
+            },
+
+            {
+                title: "Statistics Fundamentals",
+                skill: "Statistics",
+                type: "Course",
+                level: "Beginner",
+                description:
+                    "Understand descriptive statistics, probability and basic analysis."
+            },
+
+            {
+                title: "Applied Statistics",
+                skill: "Statistics",
+                type: "Course",
+                level: "Intermediate",
+                description:
+                    "Learn practical statistical methods used in official data analysis."
+            },
+
+            {
+                title: "Statistics Practice Quiz",
+                skill: "Statistics",
+                type: "Quiz",
+                level: "Intermediate",
+                description:
+                    "Test your understanding of important statistical concepts."
+            },
+
+            {
+                title: "Data Visualization Fundamentals",
+                skill: "Data Visualization",
+                type: "Learning Module",
+                level: "Beginner",
+                description:
+                    "Learn charts, dashboards and effective data presentation."
+            },
+
+            {
+                title: "Advanced Data Visualization",
+                skill: "Data Visualization",
+                type: "Course",
+                level: "Advanced",
+                description:
+                    "Explore advanced visualization techniques for analytical reporting."
+            },
+
+            {
+                title: "Excel for Data Analysis",
+                skill: "Excel",
+                type: "Course",
+                level: "Beginner",
+                description:
+                    "Learn spreadsheets, formulas, sorting, filtering and analysis."
+            },
+
+            {
+                title: "Advanced Excel Analytics",
+                skill: "Excel",
+                type: "Learning Module",
+                level: "Advanced",
+                description:
+                    "Use advanced Excel features for data analysis and reporting."
+            },
+
+            {
+                title: "Introduction to Artificial Intelligence",
+                skill: "AI & ML",
+                type: "Course",
+                level: "Beginner",
+                description:
+                    "Understand the fundamentals of artificial intelligence."
+            },
+
+            {
+                title: "Machine Learning Fundamentals",
+                skill: "AI & ML",
+                type: "Course",
+                level: "Intermediate",
+                description:
+                    "Learn the basic concepts of machine learning and predictive models."
+            },
+
+            {
+                title: "AI for Government Data",
+                skill: "AI & ML",
+                type: "Learning Module",
+                level: "Advanced",
+                description:
+                    "Explore AI applications for public-sector data and governance."
+            }
+
+        ];
+
+
+        let currentSkillFilter = "All";
+
+
+        /*
+         * =========================
+         * PAGE START
+         * =========================
+         */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadRecommendations();
+
+                displayResources(
+                    learningResources
+                );
+
+            }
+        );
+
+
+        /*
+         * =========================
+         * LOAD AI RECOMMENDATIONS
+         * =========================
+         */
+
+        function loadRecommendations() {
+
+            const gaps =
+                getSkillGaps();
+
+
+            const recommendationBox =
+                document.getElementById(
+                    "aiRecommendation"
+                );
+
+
+            if (
+                !gaps ||
+                gaps.length === 0
+            ) {
+
+                recommendationBox.textContent =
+                    "Complete the assessment to receive personalized learning recommendations.";
+
+                return;
+
+            }
+
+
+            /*
+             * Find biggest gap
+             */
+
+            const positiveGaps =
+                gaps
+                    .filter(
+                        function (item) {
+
+                            return item.gap > 0;
+
+                        }
+                    )
+                    .sort(
+                        function (a, b) {
+
+                            return b.gap - a.gap;
+
+                        }
+                    );
+
+
+            if (
+                positiveGaps.length === 0
+            ) {
+
+                recommendationBox.textContent =
+                    "Excellent! Your current competency levels meet the required levels. You can explore advanced learning resources to continue developing your skills.";
+
+            } else {
+
+                const biggestGap =
+                    positiveGaps[0];
+
+
+                recommendationBox.textContent =
+                    "Your highest-priority learning area is " +
+                    biggestGap.skill +
+                    " with a skill gap of " +
+                    biggestGap.gap +
+                    "%. Recommended resources for this skill are shown first.";
+
+            }
+
+
+            /*
+             * Display personalized cards
+             */
+
+            const recommended =
+                document.getElementById(
+                    "recommendedContainer"
+                );
+
+
+            recommended.innerHTML = "";
+
+
+            if (
+                positiveGaps.length === 0
+            ) {
+
+                recommended.innerHTML = `
+
+                    <div class="card">
+
+                        <h3>
+                            No Critical Skill Gaps
+                        </h3>
+
+                        <p>
+                            Explore advanced learning resources
+                            to continue improving your skills.
+                        </p>
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            positiveGaps
+                .slice(0, 3)
+                .forEach(
+                    function (gap) {
+
+                        const matchingResources =
+                            learningResources
+                                .filter(
+                                    function (resource) {
+
+                                        return resource.skill ===
+                                            gap.skill;
+
+                                    }
+                                )
+                                .slice(0, 2);
+
+
+                        matchingResources.forEach(
+                            function (resource) {
+
+                                recommended.innerHTML +=
+                                    createResourceCard(
+                                        resource,
+                                        gap
+                                    );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /*
+         * =========================
+         * CREATE RESOURCE CARD
+         * =========================
+         */
+
+        function createResourceCard(
+            resource,
+            gap
+        ) {
+
+            let priority =
+                gap
+                    ? gap.priority
+                    : "Explore";
+
+
+            return `
+
+                <div class="card resource-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                ${resource.title}
+                            </h3>
+
+                            <p>
+                                ${resource.skill}
+                                •
+                                ${resource.type}
+                                •
+                                ${resource.level}
+                            </p>
+
+                        </div>
+
+                        <span class="badge">
+                            ${priority}
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        ${resource.description}
+                    </p>
+
+
+                    ${
+                        gap
+                            ? `
+                                <p>
+                                    Skill Gap:
+                                    <strong>
+                                        ${gap.gap}%
+                                    </strong>
+                                </p>
+                            `
+                            : ""
+                    }
+
+
+                    <br>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="startLearning('${resource.title}')"
+                    >
+                        Start Learning →
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /*
+         * =========================
+         * DISPLAY ALL RESOURCES
+         * =========================
+         */
+
+        function displayResources(
+            resources
+        ) {
+
+            const container =
+                document.getElementById(
+                    "resourceContainer"
+                );
+
+
+            const noResults =
+                document.getElementById(
+                    "noResults"
+                );
+
+
+            container.innerHTML = "";
+
+
+            if (
+                resources.length === 0
+            ) {
+
+                noResults.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            noResults.style.display =
+                "none";
+
+
+            resources.forEach(
+                function (resource) {
+
+                    container.innerHTML +=
+                        createResourceCard(
+                            resource,
+                            null
+                        );
+
+                }
+            );
+
+        }
+
+
+        /*
+         * =========================
+         * SEARCH
+         * =========================
+         */
+
+        function filterResources() {
+
+            const search =
+                document.getElementById(
+                    "searchInput"
+                ).value
+                .toLowerCase()
+                .trim();
+
+
+            const filtered =
+                learningResources.filter(
+                    function (resource) {
+
+                        const matchesSearch =
+                            resource.title
+                                .toLowerCase()
+                                .includes(search)
+
+                            ||
+
+                            resource.skill
+                                .toLowerCase()
+                                .includes(search)
+
+                            ||
+
+                            resource.type
+                                .toLowerCase()
+                                .includes(search)
+
+                            ||
+
+                            resource.level
+                                .toLowerCase()
+                                .includes(search)
+
+                            ||
+
+                            resource.description
+                                .toLowerCase()
+                                .includes(search);
+
+
+                        const matchesSkill =
+                            currentSkillFilter ===
+                            "All"
+                            ||
+                            resource.skill ===
+                            currentSkillFilter;
+
+
+                        return (
+                            matchesSearch &&
+                            matchesSkill
+                        );
+
+                    }
+                );
+
+
+            displayResources(
+                filtered
+            );
+
+        }
+
+
+        /*
+         * =========================
+         * SKILL FILTER
+         * =========================
+         */
+
+        function filterBySkill(
+            skill,
+            button
+        ) {
+
+            currentSkillFilter =
+                skill;
+
+
+            document
+                .querySelectorAll(
+                    ".filter-btn"
+                )
+           
