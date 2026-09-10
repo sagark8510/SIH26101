@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="AI-powered skill gap analysis on SkillIntelligence.">
-
     <title>Skill Gap Analysis | SkillIntelligence</title>
 
     <link rel="stylesheet" href="styles.css">
@@ -15,466 +12,203 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar">
 
-        <div class="container">
+        <div class="nav-brand">
+            SkillIntelligence
+        </div>
 
-            <a href="index.html" class="logo">
-                SkillIntelligence
-            </a>
+        <div class="nav-links">
 
-            <div class="nav-links">
-                <a href="dashboard.html">Dashboard</a>
-                <a href="profile.html">Profile</a>
-                <a href="assessment.html">Assessment</a>
-            </div>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="assessment.html">Assessment</a>
 
         </div>
 
     </nav>
 
 
-    <!-- MAIN -->
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
     <main class="container">
 
+        <!-- PAGE HEADER -->
+
         <section class="page-header">
 
-            <div>
+            <h1>AI-Powered Skill Gap Analysis</h1>
 
-                <div class="badge">
-                    SIH26101 • AI Analysis
+            <p>
+                Your competency profile has been analyzed against
+                the required skill levels for your role.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             AI SUMMARY
+        ========================== -->
+
+        <section class="ai-box">
+
+            <h2>🤖 AI Analysis Summary</h2>
+
+            <p id="aiSummary">
+                Analyzing your competency profile...
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OVERALL STATUS
+        ========================== -->
+
+        <section class="card">
+
+            <h2>Overall Skill Status</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        Skills Analyzed
+                    </span>
+
+                    <strong id="skillsAnalyzed">
+                        0
+                    </strong>
+
                 </div>
 
-                <h1>Skill Gap Analysis</h1>
 
-                <p>
-                    Understand the difference between your current
-                    competency and the level required for your role.
-                </p>
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        Skills With Gaps
+                    </span>
+
+                    <strong id="skillsWithGaps">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        High Priority Gaps
+                    </span>
+
+                    <strong id="highPriority">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        Average Competency
+                    </span>
+
+                    <strong id="averageCompetency">
+                        0%
+                    </strong>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <section class="dashboard-layout">
+        <!-- =========================
+             SKILL GAP CARDS
+        ========================== -->
 
+        <section>
 
-            <!-- SIDEBAR -->
+            <div class="section-title">
 
-            <aside class="sidebar">
+                <h2>Identified Skill Gaps</h2>
 
-                <h3>Platform</h3>
-
-                <nav class="sidebar-nav">
-
-                    <a href="dashboard.html">
-                        📊 Dashboard
-                    </a>
-
-                    <a href="profile.html">
-                        👤 My Profile
-                    </a>
-
-                    <a href="assessment.html">
-                        🎯 Assessment
-                    </a>
-
-                    <a href="skill-gap.html" class="active">
-                        🧠 Skill Gaps
-                    </a>
-
-                    <a href="recommendations.html">
-                        📚 Recommendations
-                    </a>
-
-                    <a href="quiz.html">
-                        📝 AI Quiz
-                    </a>
-
-                    <a href="progress.html">
-                        📈 Progress
-                    </a>
-
-                </nav>
-
-            </aside>
-
-
-            <!-- CONTENT -->
-
-            <div class="main-content">
-
-
-                <!-- AI SUMMARY -->
-
-                <section class="card">
-
-                    <div class="ai-box">
-
-                        <div class="ai-icon">
-                            🧠
-                        </div>
-
-                        <div>
-
-                            <h2>AI Skill-Gap Analysis</h2>
-
-                            <p>
-                                Based on the competency assessment,
-                                the platform identifies areas where
-                                additional learning may be required.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- OVERALL STATUS -->
-
-                <section class="card">
-
-                    <div class="section-heading">
-
-                        <div>
-
-                            <h2>Overall Skill Status</h2>
-
-                            <p class="text-muted">
-                                Current competency compared with
-                                expected competency.
-                            </p>
-
-                        </div>
-
-                        <span class="badge badge-warning">
-                            3 Areas Need Attention
-                        </span>
-
-                    </div>
-
-
-                    <div class="grid grid-3">
-
-
-                        <div class="stat-card">
-
-                            <span class="stat-label">
-                                Current Average
-                            </span>
-
-                            <strong class="stat-value">
-                                58%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="stat-card">
-
-                            <span class="stat-label">
-                                Required Average
-                            </span>
-
-                            <strong class="stat-value">
-                                80%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="stat-card">
-
-                            <span class="stat-label">
-                                Overall Gap
-                            </span>
-
-                            <strong class="stat-value">
-                                22%
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- SKILL GAP TABLE -->
-
-                <section class="card">
-
-                    <div class="section-heading">
-
-                        <div>
-
-                            <h2>Identified Skill Gaps</h2>
-
-                            <p class="text-muted">
-                                Priority areas identified from
-                                the current competency profile.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="table-container">
-
-                        <table>
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>Skill</th>
-
-                                    <th>Current</th>
-
-                                    <th>Required</th>
-
-                                    <th>Gap</th>
-
-                                    <th>Priority</th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody>
-
-                                <tr>
-
-                                    <td>
-                                        <strong>SQL</strong>
-                                    </td>
-
-                                    <td>35%</td>
-
-                                    <td>75%</td>
-
-                                    <td>
-                                        <span class="badge badge-danger">
-                                            40%
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-danger">
-                                            High
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        <strong>Python</strong>
-                                    </td>
-
-                                    <td>65%</td>
-
-                                    <td>85%</td>
-
-                                    <td>
-                                        <span class="badge badge-warning">
-                                            20%
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-warning">
-                                            Medium
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        <strong>Data Visualization</strong>
-                                    </td>
-
-                                    <td>60%</td>
-
-                                    <td>80%</td>
-
-                                    <td>
-                                        <span class="badge badge-warning">
-                                            20%
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="badge badge-warning">
-                                            Medium
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </section>
-
-
-                <!-- VISUAL SKILL GAPS -->
-
-                <section class="card">
-
-                    <div class="section-heading">
-
-                        <div>
-
-                            <h2>Competency Comparison</h2>
-
-                            <p class="text-muted">
-                                Current level versus required level.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SQL -->
-
-                    <div class="skill-gap-item">
-
-                        <div class="skill-gap-header">
-
-                            <strong>SQL</strong>
-
-                            <span>
-                                35% / 75%
-                            </span>
-
-                        </div>
-
-                        <div class="bar">
-
-                            <div
-                                class="fill sql"
-                                style="width: 47%;">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- PYTHON -->
-
-                    <div class="skill-gap-item">
-
-                        <div class="skill-gap-header">
-
-                            <strong>Python</strong>
-
-                            <span>
-                                65% / 85%
-                            </span>
-
-                        </div>
-
-                        <div class="bar">
-
-                            <div
-                                class="fill python"
-                                style="width: 76%;">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DATA VISUALIZATION -->
-
-                    <div class="skill-gap-item">
-
-                        <div class="skill-gap-header">
-
-                            <strong>Data Visualization</strong>
-
-                            <span>
-                                60% / 80%
-                            </span>
-
-                        </div>
-
-                        <div class="bar">
-
-                            <div
-                                class="fill stats"
-                                style="width: 75%;">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- ACTION -->
-
-                <section class="card">
-
-                    <div class="action-card">
-
-                        <div>
-
-                            <h2>
-                                Ready to improve your skills?
-                            </h2>
-
-                            <p>
-                                Explore personalized learning
-                                recommendations based on your
-                                identified skill gaps.
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="recommendations.html"
-                            class="btn">
-
-                            View Recommendations →
-
-                        </a>
-
-                    </div>
-
-                </section>
-
+                <p>
+                    Current competency compared with the
+                    required competency level.
+                </p>
 
             </div>
+
+
+            <div id="skillGapContainer" class="card-grid">
+
+                <!-- Dynamic skill cards will appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAILED COMPARISON
+        ========================== -->
+
+        <section class="card">
+
+            <h2>Competency Comparison</h2>
+
+            <div id="comparisonContainer">
+
+                <!-- Dynamic comparison rows -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION
+        ========================== -->
+
+        <section class="card">
+
+            <h2>Next Step</h2>
+
+            <p>
+                Based on your skill gaps, the platform can
+                generate personalized learning recommendations.
+            </p>
+
+            <br>
+
+            <a
+                href="recommendations.html"
+                class="btn btn-primary"
+            >
+                View Personalized Recommendations →
+            </a>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="footer">
 
@@ -483,8 +217,443 @@
     </footer>
 
 
+    <!-- CENTRAL APPLICATION LOGIC -->
+
     <script src="app.js"></script>
+
+
+    <!-- =========================
+         DYNAMIC SKILL GAP LOGIC
+    ========================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadSkillGapPage();
+
+            }
+        );
+
+
+        function loadSkillGapPage() {
+
+            /*
+             * Get generated skill gaps
+             * from central app.js
+             */
+
+            const gaps =
+                getSkillGaps();
+
+
+            /*
+             * Get competencies
+             */
+
+            const competencies =
+                getCompetencies();
+
+
+            /*
+             * If no data exists
+             */
+
+            if (
+                !gaps ||
+                gaps.length === 0
+            ) {
+
+                document.getElementById(
+                    "skillGapContainer"
+                ).innerHTML = `
+
+                    <div class="card">
+
+                        <h3>No Skill Gap Data Available</h3>
+
+                        <p>
+                            Please complete the assessment
+                            first.
+                        </p>
+
+                        <br>
+
+                        <a
+                            href="assessment.html"
+                            class="btn btn-primary"
+                        >
+                            Take Assessment
+                        </a>
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            /*
+             * =========================
+             * CALCULATE SUMMARY
+             * =========================
+             */
+
+            const skillsAnalyzed =
+                gaps.length;
+
+
+            const skillsWithGaps =
+                gaps.filter(
+                    function (item) {
+
+                        return item.gap > 0;
+
+                    }
+                ).length;
+
+
+            const highPriority =
+                gaps.filter(
+                    function (item) {
+
+                        return item.priority === "High";
+
+                    }
+                ).length;
+
+
+            let totalScore = 0;
+
+
+            competencies.forEach(
+                function (item) {
+
+                    totalScore +=
+                        Number(item.score || 0);
+
+                }
+            );
+
+
+            const averageCompetency =
+                competencies.length > 0
+                    ? Math.round(
+                        totalScore /
+                        competencies.length
+                    )
+                    : 0;
+
+
+            /*
+             * =========================
+             * UPDATE SUMMARY
+             * =========================
+             */
+
+            document.getElementById(
+                "skillsAnalyzed"
+            ).textContent =
+                skillsAnalyzed;
+
+
+            document.getElementById(
+                "skillsWithGaps"
+            ).textContent =
+                skillsWithGaps;
+
+
+            document.getElementById(
+                "highPriority"
+            ).textContent =
+                highPriority;
+
+
+            document.getElementById(
+                "averageCompetency"
+            ).textContent =
+                averageCompetency + "%";
+
+
+            /*
+             * =========================
+             * AI SUMMARY TEXT
+             * =========================
+             */
+
+            const summary =
+                document.getElementById(
+                    "aiSummary"
+                );
+
+
+            if (highPriority > 0) {
+
+                summary.textContent =
+                    "The analysis identified " +
+                    highPriority +
+                    " high-priority skill gap(s). " +
+                    "Personalized learning should focus " +
+                    "first on the areas with the largest gaps.";
+
+            } else if (skillsWithGaps > 0) {
+
+                summary.textContent =
+                    "Your competency profile shows " +
+                    skillsWithGaps +
+                    " skill area(s) that can be improved. " +
+                    "The platform recommends targeted learning " +
+                    "to close these gaps.";
+
+            } else {
+
+                summary.textContent =
+                    "Your current competency levels meet " +
+                    "the required levels across the analyzed skills.";
+
+            }
+
+
+            /*
+             * =========================
+             * CREATE SKILL CARDS
+             * =========================
+             */
+
+            const container =
+                document.getElementById(
+                    "skillGapContainer"
+                );
+
+
+            container.innerHTML = "";
+
+
+            gaps.forEach(
+                function (item) {
+
+                    const priorityClass =
+                        item.priority
+                            .toLowerCase();
+
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "card";
+
+
+                    card.innerHTML = `
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    ${item.skill}
+                                </h3>
+
+                                <p>
+                                    Current: ${item.current}%
+                                    &nbsp; | &nbsp;
+                                    Required: ${item.required}%
+                                </p>
+
+                            </div>
+
+                            <span class="badge ${priorityClass}">
+                                ${item.priority}
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-container">
+
+                            <div class="progress-label">
+
+                                <span>
+                                    Current Competency
+                                </span>
+
+                                <strong>
+                                    ${item.current}%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width:${item.current}%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-container">
+
+                            <div class="progress-label">
+
+                                <span>
+                                    Required Level
+                                </span>
+
+                                <strong>
+                                    ${item.required}%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width:${item.required}%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert">
+
+                            Skill Gap:
+                            <strong>
+                                ${item.gap}%
+                            </strong>
+
+                        </div>
+
+                    `;
+
+
+                    container.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+
+            /*
+             * =========================
+             * COMPARISON TABLE
+             * =========================
+             */
+
+            const comparison =
+                document.getElementById(
+                    "comparisonContainer"
+                );
+
+
+            comparison.innerHTML = "";
+
+
+            gaps.forEach(
+                function (item) {
+
+                    const row =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    row.className =
+                        "skill-comparison";
+
+
+                    row.innerHTML = `
+
+                        <div class="comparison-header">
+
+                            <strong>
+                                ${item.skill}
+                            </strong>
+
+                            <span>
+                                Gap: ${item.gap}%
+                            </span>
+
+                        </div>
+
+
+                        <div class="comparison-bars">
+
+                            <div>
+
+                                <small>
+                                    Current
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        style="width:${item.current}%"
+                                    ></div>
+
+                                </div>
+
+                                <small>
+                                    ${item.current}%
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Required
+                                </small>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        style="width:${item.required}%"
+                                    ></div>
+
+                                </div>
+
+                                <small>
+                                    ${item.required}%
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                    `;
+
+
+                    comparison.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
 
 </body>
 
-  </html>
+</html>
