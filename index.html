@@ -4,436 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Skill Intelligence & Learning Platform</title>
+    <meta name="description"
+        content="AI-enabled Skill Intelligence and Learning Platform for competency assessment, skill-gap analysis and personalized learning.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+    <title>SkillIntelligence | SIH26101</title>
 
-        body {
-            background: #f5f7fb;
-            color: #172033;
-        }
-
-        /* NAVBAR */
-        nav {
-            height: 70px;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 7%;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: bold;
-            color: #174ea6;
-        }
-
-        .nav-tag {
-            font-size: 13px;
-            color: #667085;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 570px;
-            padding: 80px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            background: linear-gradient(135deg, #eef5ff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 650px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 14px;
-            background: #dceaff;
-            color: #174ea6;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #174ea6;
-        }
-
-        .hero p {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #667085;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 25px;
-            background: #174ea6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #123d82;
-        }
-
-        /* HERO VISUAL */
-        .hero-card {
-            width: 380px;
-            background: white;
-            border-radius: 18px;
-            padding: 25px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-
-        .hero-card h3 {
-            margin-bottom: 20px;
-        }
-
-        .skill {
-            margin: 18px 0;
-        }
-
-        .skill-top {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            margin-bottom: 7px;
-        }
-
-        .bar {
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .fill {
-            height: 100%;
-            background: #174ea6;
-            border-radius: 10px;
-        }
-
-        .fill.python {
-            width: 75%;
-        }
-
-        .fill.sql {
-            width: 45%;
-        }
-
-        .fill.stats {
-            width: 90%;
-        }
-
-        /* FEATURES */
-        .features {
-            padding: 70px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #667085;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 28px;
-            border-radius: 14px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .icon {
-            width: 45px;
-            height: 45px;
-            background: #eaf2ff;
-            color: #174ea6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 22px;
-            margin-bottom: 18px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            color: #667085;
-            line-height: 1.6;
-            font-size: 14px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #172033;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 13px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 850px) {
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 60px;
-            }
-
-            .hero-card {
-                width: 100%;
-                max-width: 400px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-tag {
-                display: none;
-            }
-        }
-    </style>
+    <!-- Common website design -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">SkillIntelligence</div>
-        <div class="nav-tag">SIH26101 • Smart Education</div>
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            SkillIntelligence
+        </a>
+
+        <div class="nav-tag">
+            SIH26101 • Smart Education
+        </div>
+
     </nav>
 
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main>
 
-        <div class="hero-content">
+        <!-- HERO -->
+        <section class="hero">
 
-            <div class="badge">
-                AI-Powered Learning Platform
-            </div>
+            <div class="hero-content">
 
-            <h1>
-                Discover Your
-                <span>Skill Gaps.</span>
-                Build Your Future.
-            </h1>
-
-            <p>
-                An intelligent learning platform designed to assess
-                competencies, identify skill gaps and provide personalized
-                learning recommendations for officials.
-            </p>
-
-            <a href="dashboard.html" class="btn">
-                Get Started →
-            </a>
-
-        </div>
-
-
-        <!-- DEMO SKILL CARD -->
-        <div class="hero-card">
-
-            <h3>Sample Competency Profile</h3>
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>Statistics</span>
-                    <span>Advanced</span>
+                <div class="badge">
+                    AI-Powered Learning Platform
                 </div>
 
-                <div class="bar">
-                    <div class="fill stats"></div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>Python</span>
-                    <span>Intermediate</span>
-                </div>
-
-                <div class="bar">
-                    <div class="fill python"></div>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>SQL</span>
-                    <span>Beginner</span>
-                </div>
-
-                <div class="bar">
-                    <div class="fill sql"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURES -->
-    <section class="features">
-
-        <div class="section-title">
-
-            <h2>One Platform. Smarter Learning.</h2>
-
-            <p>
-                Identify gaps, learn the right skills and track your progress.
-            </p>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-
-                <div class="icon">🎯</div>
-
-                <h3>Competency Assessment</h3>
+                <h1>
+                    Discover Your
+                    <span>Skill Gaps.</span>
+                    Build Your Future.
+                </h1>
 
                 <p>
-                    Assess your current competencies and understand your
-                    strengths and areas that need improvement.
+                    An intelligent learning platform designed to assess
+                    competencies, identify skill gaps and provide personalized
+                    learning recommendations for officials.
+                </p>
+
+                <a href="dashboard.html" class="btn">
+                    Get Started →
+                </a>
+
+            </div>
+
+
+            <!-- SAMPLE COMPETENCY PROFILE -->
+            <div class="hero-card">
+
+                <h3>
+                    Sample Competency Profile
+                </h3>
+
+                <div class="skill">
+
+                    <div class="skill-top">
+                        <span>Statistics</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="bar">
+                        <div class="fill stats"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-top">
+                        <span>Python</span>
+                        <span>Intermediate</span>
+                    </div>
+
+                    <div class="bar">
+                        <div class="fill python"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-top">
+                        <span>SQL</span>
+                        <span>Beginner</span>
+                    </div>
+
+                    <div class="bar">
+                        <div class="fill sql"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+             ========================= -->
+        <section class="features">
+
+            <div class="section-title">
+
+                <h2>
+                    One Platform. Smarter Learning.
+                </h2>
+
+                <p>
+                    Identify gaps, learn the right skills and track your progress.
                 </p>
 
             </div>
 
 
-            <div class="feature-card">
+            <div class="feature-grid">
 
-                <div class="icon">🧠</div>
+                <div class="feature-card">
 
-                <h3>AI Skill-Gap Analysis</h3>
+                    <div class="icon">🎯</div>
 
-                <p>
-                    Identify the difference between your current skills
-                    and the competencies required for your role.
-                </p>
+                    <h3>
+                        Competency Assessment
+                    </h3>
+
+                    <p>
+                        Assess current competencies and understand strengths
+                        and areas that need improvement.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">🧠</div>
+
+                    <h3>
+                        AI Skill-Gap Analysis
+                    </h3>
+
+                    <p>
+                        Identify the difference between current skills and
+                        competencies required for a role.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">📚</div>
+
+                    <h3>
+                        Personalized Learning
+                    </h3>
+
+                    <p>
+                        Receive learning recommendations based on the
+                        competency profile and identified skill gaps.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">🤖</div>
+
+                    <h3>
+                        AI Quiz Generator
+                    </h3>
+
+                    <p>
+                        Generate quizzes and MCQs from learning materials
+                        to evaluate knowledge and understanding.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">📊</div>
+
+                    <h3>
+                        Progress Tracking
+                    </h3>
+
+                    <p>
+                        Monitor learning progress and competency development
+                        through an easy-to-understand dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">💬</div>
+
+                    <h3>
+                        AI Learning Assistant
+                    </h3>
+
+                    <p>
+                        Get assistance while learning and explore relevant
+                        concepts through an intelligent virtual assistant.
+                    </p>
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="feature-card">
-
-                <div class="icon">📚</div>
-
-                <h3>Personalized Learning</h3>
-
-                <p>
-                    Receive learning recommendations based on your
-                    individual competency profile and skill gaps.
-                </p>
-
-            </div>
+    </main>
 
 
-            <div class="feature-card">
-
-                <div class="icon">🤖</div>
-
-                <h3>AI Quiz Generator</h3>
-
-                <p>
-                    Generate quizzes and MCQs from learning materials
-                    to evaluate knowledge and understanding.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="icon">📊</div>
-
-                <h3>Progress Tracking</h3>
-
-                <p>
-                    Monitor learning progress and competency development
-                    through an easy-to-understand dashboard.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="icon">💬</div>
-
-                <h3>AI Learning Assistant</h3>
-
-                <p>
-                    Get assistance while learning and explore relevant
-                    concepts through an intelligent virtual assistant.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="footer">
 
         SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
 
