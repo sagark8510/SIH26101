@@ -1,1 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="AI-assisted quiz generator and assessment on SkillIntelligence.">
+
+    <title>AI Quiz | SkillIntelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                SkillIntelligence
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <section class="page-header">
+
+            <div>
+
+                <div class="badge">
+                    SIH26101 • AI Assessment
+                </div>
+
+                <h1>AI Quiz Generator</h1>
+
+                <p>
+                    Generate an assessment from learning material
+                    and instantly evaluate your knowledge.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <h3>Platform</h3>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="profile.html">
+                        👤 My Profile
+                    </a>
+
+                    <a href="assessment.html">
+                        🎯 Assessment
+                    </a>
+
+                    <a href="skill-gap.html">
+                        🧠 Skill Gaps
+                    </a>
+
+                    <a href="recommendations.html">
+                        📚 Recommendations
+                    </a>
+
+                    <a href="quiz.html" class="active">
+                        📝 AI Quiz
+                    </a>
+
+                    <a href="progress.html">
+                        📈 Progress
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- CONTENT -->
+
+            <div class="main-content">
+
+
+                <!-- AI GENERATOR -->
+
+                <section class="card">
+
+                    <div class="ai-box">
+
+                        <div class="ai-icon">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <h2>AI Quiz Generator</h2>
+
+                            <p>
+                                Upload or provide learning material
+                                and the AI engine can generate
+                                relevant MCQs, evaluate answers and
+                                provide instant feedback.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="topic">
+                            Learning Topic
+                        </label>
+
+                        <select id="topic">
+
+                            <option value="sql">
+                                SQL for Data Analysis
+                            </option>
+
+                            <option value="python">
+                                Python for Statistics
+                            </option>
+
+                            <option value="visualization">
+                                Data Visualization
+                            </option>
+
+                            <option value="statistics">
+                                Statistics
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="difficulty">
+                            Difficulty Level
+                        </label>
+
+                        <select id="difficulty">
+
+                            <option>
+                                Beginner
+                            </option>
+
+                            <option selected>
+                                Intermediate
+                            </option>
+
+                            <option>
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        onclick="generateQuiz()">
+
+                        Generate Quiz →
+
+                    </button>
+
+                </section>
+
+
+                <!-- QUIZ AREA -->
+
+                <section
+                    class="card"
+                    id="quizArea">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Sample AI-Generated Quiz
+                            </h2>
+
+                            <p class="text-muted">
+                                Topic: SQL for Data Analysis
+                            </p>
+
+                        </div>
+
+                        <span class="badge">
+                            5 Questions
+                        </span>
+
+                    </div>
+
+
+                    <form id="quizForm">
+
+
+                        <!-- QUESTION 1 -->
+
+                        <div class="quiz-question">
+
+                            <h3>
+                                1. Which SQL command is used to
+                                retrieve data from a database?
+                            </h3>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q1"
+                                    value="a">
+
+                                <span>
+                                    A. GET
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q1"
+                                    value="b">
+
+                                <span>
+                                    B. SELECT
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q1"
+                                    value="c">
+
+                                <span>
+                                    C. FETCHDATA
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q1"
+                                    value="d">
+
+                                <span>
+                                    D. OPEN
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- QUESTION 2 -->
+
+                        <div class="quiz-question">
+
+                            <h3>
+                                2. Which SQL clause is used to
+                                filter records?
+                            </h3>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q2"
+                                    value="a">
+
+                                <span>
+                                    A. ORDER BY
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q2"
+                                    value="b">
+
+                                <span>
+                                    B. GROUP BY
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q2"
+                                    value="c">
+
+                                <span>
+                                    C. WHERE
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q2"
+                                    value="d">
+
+                                <span>
+                                    D. SORT
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- QUESTION 3 -->
+
+                        <div class="quiz-question">
+
+                            <h3>
+                                3. Which SQL function is commonly
+                                used to calculate the average value?
+                            </h3>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q3"
+                                    value="a">
+
+                                <span>
+                                    A. SUM()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q3"
+                                    value="b">
+
+                                <span>
+                                    B. COUNT()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q3"
+                                    value="c">
+
+                                <span>
+                                    C. AVG()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q3"
+                                    value="d">
+
+                                <span>
+                                    D. TOTAL()
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- QUESTION 4 -->
+
+                        <div class="quiz-question">
+
+                            <h3>
+                                4. Which clause is used to group
+                                rows having the same values?
+                            </h3>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q4"
+                                    value="a">
+
+                                <span>
+                                    A. GROUP BY
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q4"
+                                    value="b">
+
+                                <span>
+                                    B. ORDER BY
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q4"
+                                    value="c">
+
+                                <span>
+                                    C. WHERE
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q4"
+                                    value="d">
+
+                                <span>
+                                    D. JOIN BY
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- QUESTION 5 -->
+
+                        <div class="quiz-question">
+
+                            <h3>
+                                5. Which SQL function counts the
+                                number of rows?
+                            </h3>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q5"
+                                    value="a">
+
+                                <span>
+                                    A. NUMBER()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q5"
+                                    value="b">
+
+                                <span>
+                                    B. COUNT()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q5"
+                                    value="c">
+
+                                <span>
+                                    C. ROWS()
+                                </span>
+
+                            </label>
+
+
+                            <label class="option">
+
+                                <input
+                                    type="radio"
+                                    name="q5"
+                                    value="d">
+
+                                <span>
+                                    D. TOTAL()
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn"
+                            onclick="submitQuiz()">
+
+                            Submit Quiz
+
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- RESULT -->
+
+                <section
+                    class="card"
+                    id="quizResult"
+                    style="display: none;">
+
+                    <div class="ai-box">
+
+                        <div class="ai-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <h2>Assessment Result</h2>
+
+                            <p id="resultText">
+                                Your result will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="progress.html"
+                        class="btn">
+
+                        View Progress →
+
+                    </a>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+
+    <script>
+
+        function generateQuiz() {
+
+            const topic =
+                document.getElementById("topic").value;
+
+            const difficulty =
+                document.getElementById("difficulty").value;
+
+            alert(
+                "AI Quiz generated for " +
+                topic.toUpperCase() +
+                " at " +
+                difficulty +
+                " level."
+            );
+
+        }
+
+
+        function submitQuiz() {
+
+            const answers = {
+
+                q1: "b",
+                q2: "c",
+                q3: "c",
+                q4: "a",
+                q5: "b"
+
+            };
+
+
+            let score = 0;
+
+
+            for (const question in answers) {
+
+                const selected =
+                    document.querySelector(
+                        'input[name="' +
+                        question +
+                        '"]:checked'
+                    );
+
+
+                if (selected && selected.value === answers[question]) {
+
+                    score++;
+
+                }
+
+            }
+
+
+            const percentage =
+                (score / 5) * 100;
+
+
+            const result =
+                document.getElementById("quizResult");
+
+            const resultText =
+                document.getElementById("resultText");
+
+
+            result.style.display = "block";
+
+
+            resultText.innerHTML =
+                "You scored <strong>" +
+                score +
+                "/5 (" +
+                percentage +
+                "%)</strong>. " +
+                "Use this result to identify areas that may need more practice.";
+
+
+            const progress = {
+
+                score: score,
+
+                total: 5,
+
+                percentage: percentage,
+
+                completed: true,
+
+                date: new Date().toISOString()
+
+            };
+
+
+            localStorage.setItem(
+                "si_last_quiz",
+                JSON.stringify(progress)
+            );
+
+
+            result.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+
+  </html>
