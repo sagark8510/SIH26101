@@ -1,1 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Official competency profile on SkillIntelligence.">
+
+    <title>My Profile | SkillIntelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                SkillIntelligence
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <section class="page-header">
+
+            <div>
+
+                <div class="badge">
+                    SIH26101 • Official Profile
+                </div>
+
+                <h1>My Profile</h1>
+
+                <p>
+                    Manage your professional information and
+                    competency profile.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <h3>Platform</h3>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="profile.html" class="active">
+                        👤 My Profile
+                    </a>
+
+                    <a href="assessment.html">
+                        🎯 Assessment
+                    </a>
+
+                    <a href="skill-gap.html">
+                        🧠 Skill Gaps
+                    </a>
+
+                    <a href="recommendations.html">
+                        📚 Recommendations
+                    </a>
+
+                    <a href="quiz.html">
+                        📝 AI Quiz
+                    </a>
+
+                    <a href="progress.html">
+                        📈 Progress
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- PROFILE CONTENT -->
+
+            <div class="main-content">
+
+
+                <!-- BASIC INFORMATION -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Professional Information</h2>
+
+                            <p class="text-muted">
+                                Basic information about the learner.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="grid grid-2">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter full name"
+                                    value="Demo Official"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="designation">
+                                    Designation
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="designation"
+                                    name="designation"
+                                    placeholder="Enter designation"
+                                    value="Statistical Officer"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="department">
+                                    Department
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="department"
+                                    name="department"
+                                    placeholder="Enter department"
+                                    value="Official Statistics"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="experience">
+                                    Experience (Years)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="experience"
+                                    name="experience"
+                                    min="0"
+                                    value="3"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="education">
+                                    Education
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="education"
+                                    name="education"
+                                    placeholder="Enter education"
+                                    value="Graduation"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="role">
+                                    Current Role
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="role"
+                                    name="role"
+                                    placeholder="Enter current role"
+                                    value="Data & Statistical Analysis"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn">
+                                Save Profile
+                            </button>
+
+                            <a
+                                href="dashboard.html"
+                                class="btn btn-secondary">
+                                Cancel
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- COMPETENCY DOMAINS -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Competency Domains</h2>
+
+                            <p class="text-muted">
+                                Areas evaluated by the platform.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grid grid-2">
+
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                📊
+                            </div>
+
+                            <div>
+
+                                <h3>Statistical</h3>
+
+                                <p>
+                                    Statistics, data analysis,
+                                    sampling and interpretation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                💻
+                            </div>
+
+                            <div>
+
+                                <h3>Technical</h3>
+
+                                <p>
+                                    Programming, databases,
+                                    tools and technical skills.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                🌐
+                            </div>
+
+                            <div>
+
+                                <h3>Digital Governance</h3>
+
+                                <p>
+                                    Digital systems, governance
+                                    and technology adoption.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <div class="info-icon">
+                                🤝
+                            </div>
+
+                            <div>
+
+                                <h3>Behavioural & Managerial</h3>
+
+                                <p>
+                                    Communication, leadership,
+                                    collaboration and management.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PROFILE STATUS -->
+
+                <section class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Profile Status</h2>
+
+                            <p class="text-muted">
+                                Complete your profile before starting
+                                the competency assessment.
+                            </p>
+
+                        </div>
+
+                        <span class="badge badge-success">
+                            Demo Profile
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 80%;">
+                        </div>
+
+                    </div>
+
+                    <p class="text-muted">
+                        Profile completion: 80%
+                    </p>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        SIH26101 • AI-Enabled Skill Intelligence & Learning Platform
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+  </html>
