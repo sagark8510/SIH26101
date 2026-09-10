@@ -486,10 +486,9 @@
 
     <script src="app.js"></script>
 
+<script>
 
-    <script>
-
-        function submitAssessment() {
+function submitAssessment() {
 
     const statistics =
         document.querySelector(
@@ -511,9 +510,6 @@
             'input[name="behavioural"]:checked'
         );
 
-
-    // Check all answers
-
     if (
         !statistics ||
         !technical ||
@@ -529,45 +525,29 @@
 
     }
 
-
-    // Save assessment
-
     const assessment = {
 
-        statistics:
-            statistics.value,
+        statistics: statistics.value,
 
-        technical:
-            technical.value,
+        technical: technical.value,
 
-        governance:
-            governance.value,
+        governance: governance.value,
 
-        behavioural:
-            behavioural.value,
+        behavioural: behavioural.value,
 
         completed: true,
 
-        date:
-            new Date().toISOString()
+        date: new Date().toISOString()
 
     };
-
 
     localStorage.setItem(
         "si_assessment",
         JSON.stringify(assessment)
     );
 
-
-    // Generate competency + skill gaps
-    // + recommendations
-
     const result =
-        processAssessment(
-            assessment
-        );
-
+        processAssessment(assessment);
 
     console.log(
         "Competencies:",
@@ -584,82 +564,16 @@
         result.recommendations
     );
 
-
     alert(
         "Assessment completed successfully! Your skill gaps have been analyzed."
     );
 
-
-    // Go to skill-gap page
-
     window.location.href =
         "skill-gap.html";
 
-        }
+}
 
-            const statistics =
-                document.querySelector('input[name="statistics"]:checked');
-
-            const technical =
-                document.querySelector('input[name="technical"]:checked');
-
-            const governance =
-                document.querySelector('input[name="governance"]:checked');
-
-            const behavioural =
-                document.querySelector('input[name="behavioural"]:checked');
-
-
-            if (
-                !statistics ||
-                !technical ||
-                !governance ||
-                !behavioural
-            ) {
-
-                alert(
-                    "Please answer all four competency sections before submitting."
-                );
-
-                return;
-
-            }
-
-
-            const assessment = {
-
-                statistics: statistics.value,
-
-                technical: technical.value,
-
-                governance: governance.value,
-
-                behavioural: behavioural.value,
-
-                completed: true,
-
-                date: new Date().toISOString()
-
-            };
-
-
-            localStorage.setItem(
-                "si_assessment",
-                JSON.stringify(assessment)
-            );
-
-
-            alert(
-                "Assessment completed successfully!"
-            );
-
-
-            window.location.href = "skill-gap.html";
-
-        }
-
-    </script>
+</script>
 
 </body>
-
-  </html>
+</html>
